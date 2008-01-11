@@ -1,0 +1,9 @@
+Changelog for cs.editablefooter
+
+    (name of developer listed in brackets)
+
+cs.editablefooter - 0.1 Unreleased
+
+    - Initial package structure.
+      [zopeskel]
+
