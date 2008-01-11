@@ -1,8 +1,35 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
     i18n_domain="cs.editablefooter">
 
     <five:registerPackage package="." initialize=".initialize" />
+
+    <gs:registerProfile
+        name="default"
+        title="Editable footer"
+        directory="profiles/default"
+        description="Create an editable footer with portlet assignments"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <browser:viewlet
+        name="cs.editablefooter"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        template="footerportlets.pt"
+        permission="zope2.View"
+        layer="cs.editablefooter.interfaces.IProductLayer"
+        />
+
+    <browser:page
+        for="plone.portlets.interfaces.ILocalPortletAssignable"
+        class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+        name="manage-footer"
+        template="managefooter.pt"
+        permission="plone.app.portlets.ManagePortlets"
+        layer="cs.editablefooter.interfaces.IProductLayer"
+        />
 
 </configure>

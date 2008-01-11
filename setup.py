@@ -27,6 +27,7 @@ setup(name='cs.editablefooter',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.browserlayer'
       ],
       entry_points="""
       # -*- Entry points: -*-

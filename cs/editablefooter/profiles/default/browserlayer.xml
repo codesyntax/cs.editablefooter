@@ -1,0 +1,6 @@
+<layers>
+  <layer
+      name="cs.editablefooter"
+      interface="cs.editablefooter.interfaces.IProductLayer"
+      />
+</layers>
