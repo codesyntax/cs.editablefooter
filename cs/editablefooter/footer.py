@@ -7,6 +7,14 @@ from zope.formlib import form
 from plone.app.controlpanel.form import ControlPanelForm
 from plone.app.layout.viewlets.common import ViewletBase
 
+try:
+    from plone.app.form.widgets.wysiwygwidget import WYSIWYGWidget
+    KUPU_WIDGET = True
+except ImportError:
+    KUPU_WIDGET = False
+
+
+
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFDefault.formlib.schema import SchemaAdapterBase
 from Products.CMFPlone.utils import safe_unicode
@@ -41,8 +49,12 @@ class EditableFooterControlPanelAdapter(SchemaAdapterBase):
     footer_text = property(get_footer_text, set_footer_text)
 
 
+
 class EditableFooterControlPanel(ControlPanelForm):
     form_fields = form.FormFields(IEditableFooter)
+
+    if KUPU_WIDGET:
+        form_fields['footer_text'].custom_widget = WYSIWYGWidget
 
     form_name = _(u'Editable footer')
     label = _(u'Editable footer content')
