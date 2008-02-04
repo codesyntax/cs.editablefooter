@@ -15,4 +15,24 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
+    <browser:page
+        name="editablefooter-controlpanel"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".footer.EditableFooterControlPanel"
+        permission="cmf.ManagePortal"
+        layer=".interfaces.IProductLayer"
+        />
+
+    <adapter
+        factory=".footer.EditableFooterControlPanelAdapter"
+        />
+
+    <browser:viewlet
+        name="cs.editablefooter"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".footer.EditableFooterViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IProductLayer"
+        />
+
 </configure>

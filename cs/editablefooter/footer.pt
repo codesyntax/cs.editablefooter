@@ -1,0 +1,3 @@
+<div id="editable-footer">
+  <p tal:replace="structure view/footer_text"/>
+</div>
