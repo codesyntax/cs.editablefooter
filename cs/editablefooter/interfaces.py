@@ -11,4 +11,5 @@ class IEditableFooter(Interface):
 
     footer_text = schema.Text(title=_(u'Footer text'),
                               description=_(u'Insert here the HTML that will appear in the footer'),
+                              required=False,
                               )
