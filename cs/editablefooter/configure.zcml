@@ -9,7 +9,7 @@
 
     <gs:registerProfile
         name="default"
-        title="Editable footer"
+        title="cs.editablefooter"
         directory="profiles/default"
         description="Create an editable footer with portlet assignments"
         provides="Products.GenericSetup.interfaces.EXTENSION"
