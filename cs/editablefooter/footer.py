@@ -52,7 +52,7 @@ class EditableFooterControlPanelAdapter(SchemaAdapterBase):
 	    value=''
 	    
 	if self.fprops.hasProperty(ida):
-	    self.fprops.ida=value
+	    setattr(self.fprops, ida, value)
 	else:
 	    self.fprops.manage_addProperty(ida,value,'text')
 
