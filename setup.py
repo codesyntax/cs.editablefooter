@@ -10,15 +10,12 @@ setup(name='cs.editablefooter',
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
-        "Framework :: Zope2",
-        "Framework :: Zope3",
         "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='plone plone3 viewlet footer',
       author='Mikel Larreategi',
       author_email='mlarreategi@codesyntax.com',
-      url='http://code.codesyntax.com/private/cs.editablefooter',
+      url='http://github.com/codesyntax/cs.editablefooter',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cs'],
@@ -27,12 +24,11 @@ setup(name='cs.editablefooter',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'plone.browserlayer',
-          'plone.app.form',
-          'plone.app.controlpanel',
-          'plone.app.layout',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )
