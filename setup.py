@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '0.8'
+version = '1.0'
 
 setup(name='cs.editablefooter',
       version=version,
@@ -27,7 +27,7 @@ setup(name='cs.editablefooter',
       ],
       entry_points="""
       # -*- Entry points: -*-
-      
+
       [z3c.autoinclude.plugin]
       target = plone
       """,
