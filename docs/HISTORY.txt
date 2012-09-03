@@ -2,18 +2,22 @@
 cs.editablefooter
 =================== 
 
-1.1 (Unreleased)
---------------------
+1.0.1 (2012/09/03)
+---------------------
+
+- Close Properly all HTML tags
+  [erral]
+
 
 1.0 (2012/05/28)
 --------------------
 
-    - Plone 4.1 support
-      [erral]
+- Plone 4.1 support
+  [erral]
 
 
 Previous versions
 -----------------------
 
-    - Multilingual editable footer viewlet
-      [erral & lur]
+- Multilingual editable footer viewlet
+  [erral & lur]
