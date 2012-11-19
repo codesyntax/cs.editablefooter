@@ -21,6 +21,16 @@ It also creates a new control panel in which you can edit the content
 of the viewlet using a WYSIWYG editor.
 
 
+Upgrade
+==========
+
+From version 2.0 on, the permission to edit the contents of the viewlet
+has been changed from "Manage portal" to a custom "cs.editablefooter: edit footer".
+
+By default this permission is assigned to Site Administrators and Managers.
+
+Go to the Add-on controlpanel and hit upgrade.
+
 
 Author
 ======
