@@ -1,11 +1,13 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:gs="http://namespaces.zope.org/genericsetup"
     i18n_domain="cs.editablefooter">
 
     <include file="profiles.zcml" />
     <include file="permissions.zcml" />
+    <i18n:registerTranslations directory="locales" />
 
     <browser:page
         name="editablefooter-controlpanel"

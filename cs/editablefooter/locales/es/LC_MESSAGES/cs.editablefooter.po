@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs.editablefooter\n"
+"POT-Creation-Date: 2012-11-19 07:54+0000\n"
+"PO-Revision-Date: 2012-11-19 08:55+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
+"Language-Team: es <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Poedit-Language: Spanish\n"
+
+#: ./footer.py:70
+msgid "Editable footer"
+msgstr "Footer editable"
+
+#: ./footer.py:71
+msgid "Editable footer content"
+msgstr "Contenido del footer"
+
+msgid "Editable footer settings"
+msgstr "Footer editable"
+
+#: ./footer.py:72
+msgid "Enter the content of the footer"
+msgstr "Introduzca el contenido que se mostrará en la parte final de la página"
+
+#: ./interfaces.py:12
+msgid "Footer text"
+msgstr "Texto del footer"
+
+#: ./interfaces.py:13
+msgid "Insert here the HTML that will appear in the footer"
+msgstr "Introduzca el contenido que se mostrará en la parte final de la página"
+
