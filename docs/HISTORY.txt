@@ -1,6 +1,15 @@
 Changelog
 =============
 
+2.0 (2012/11/19)
+-----------------
+
+- Add translations
+  [erral]
+
+- Create a permission to edit the footer
+  [erral]
+
 1.0.1 (2012/09/03)
 ---------------------
 
