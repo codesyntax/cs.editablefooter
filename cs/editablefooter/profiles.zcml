@@ -8,7 +8,7 @@
         name="default"
         title="cs.editablefooter"
         directory="profiles/default"
-        description="Create an editable footer with portlet assignments"
+        description="Create a footer editable from the Plone Control Panel"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
