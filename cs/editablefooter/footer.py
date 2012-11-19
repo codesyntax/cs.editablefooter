@@ -14,7 +14,6 @@ except ImportError:
     KUPU_WIDGET = False
 
 
-
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFDefault.formlib.schema import SchemaAdapterBase
 from Products.CMFPlone.utils import safe_unicode
@@ -36,25 +35,23 @@ class EditableFooterControlPanelAdapter(SchemaAdapterBase):
         self.fprops = pprop.footer_properties
 
     def get_footer_text(self):
-	#import pdb;pdb.set_trace()
-	language = self.portal.REQUEST.get('LANGUAGE', '')
-	ida='footer_text_' + language
+        language = self.portal.REQUEST.get('LANGUAGE', '')
+        ida='footer_text_' + language
         text = getattr(self.fprops, ida, u'')
         return safe_unicode(text)
-        
+
     def set_footer_text(self, value):
-	#import pdb;pdb.set_trace()
-	language = self.portal.REQUEST.get('LANGUAGE', '')
-	ida='footer_text_' + language
-	if value is not None:
-	    value=value.encode(self.encoding)
-	else:
-	    value=''
-	    
-	if self.fprops.hasProperty(ida):
-	    setattr(self.fprops, ida, value)
-	else:
-	    self.fprops.manage_addProperty(ida,value,'text')
+        language = self.portal.REQUEST.get('LANGUAGE', '')
+        ida='footer_text_' + language
+        if value is not None:
+            value=value.encode(self.encoding)
+        else:
+            value=''
+
+        if self.fprops.hasProperty(ida):
+            setattr(self.fprops, ida, value)
+        else:
+            self.fprops.manage_addProperty(ida,value,'text')
 
 
     footer_text = property(get_footer_text, set_footer_text)
@@ -75,9 +72,8 @@ class EditableFooterControlPanel(ControlPanelForm):
 class EditableFooterViewlet(ViewletBase):
 
     def update(self):
-	#import pdb;pdb.set_trace()
-	language = self.request.get('LANGUAGE', '')
-	ida='footer_text_' + language
+        language = self.request.get('LANGUAGE', '')
+        ida='footer_text_' + language
         pprops = getToolByName(self.context, 'portal_properties')
         fprops = pprops.footer_properties
         text = getattr(fprops, ida, u'')
@@ -85,5 +81,5 @@ class EditableFooterViewlet(ViewletBase):
 
     render = ViewPageTemplateFile('footer.pt')
 
-    
-    
+
+
