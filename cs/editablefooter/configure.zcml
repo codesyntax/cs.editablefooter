@@ -5,12 +5,13 @@
     i18n_domain="cs.editablefooter">
 
     <include file="profiles.zcml" />
+    <include file="permissions.zcml" />
 
     <browser:page
         name="editablefooter-controlpanel"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         class=".footer.EditableFooterControlPanel"
-        permission="cmf.ManagePortal"
+        permission="cs.editablefooter.editfooter"
         layer=".interfaces.IProductLayer"
         />
 
