@@ -77,9 +77,17 @@ class EditableFooterViewlet(ViewletBase):
         pprops = getToolByName(self.context, 'portal_properties')
         fprops = pprops.footer_properties
         text = getattr(fprops, ida, u'')
-        self.footer_text = safe_unicode(text)
+
+        transforms = getToolByName(self.context, 'portal_transforms', None)
+        data = transforms.convertTo('text/x-html-safe',
+                                    text,
+                                    mimetype='text/html',
+                                    context=self.context)
+        if data is None:
+            self.footer_text = safe_unicode(text)
+        else:
+            output = data.getData()
+            self.footer_text = safe_unicode(output)
+
 
     render = ViewPageTemplateFile('footer.pt')
-
-
-
