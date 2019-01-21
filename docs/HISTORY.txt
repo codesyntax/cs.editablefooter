@@ -1,8 +1,8 @@
 Changelog
 =============
 
-2.1 (UNRELEASED)
------------------
+2.1 (2019-01-21)
+----------------
 
 - Apply transforms to get UID links rendered
   [erral]
